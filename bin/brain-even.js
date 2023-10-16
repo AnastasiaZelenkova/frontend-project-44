@@ -7,12 +7,14 @@ const isEven = (n) => {
   return 'no';
 };
 
-const  getRandomInt = (min, max) => {
-    return Math.floor(Math.random() * (max - min)) + min;
+const getRandomInt = (min, max) => {
+  const result = Math.floor(Math.random() * (max - min)) + min;
+  return result;
 };
 
 const brainEven = (userName) => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  let result;
   let i = 0;
   while (i < 3) {
     const randomNum = getRandomInt(1, 50);
@@ -23,10 +25,12 @@ const brainEven = (userName) => {
       console.log('Correct!');
       i += 1;
     } else {
-      return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
+      result = console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
+      return result;
     }
   }
-  console.log(`Congratulations, ${userName}!`);
+  result = console.log(`Congratulations, ${userName}!`);
+  return result;
 };
 
 console.log('Welcome to the Brain Games!');
