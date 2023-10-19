@@ -1,10 +1,10 @@
-import readlineSync from 'readline-sync';
+#!/usr/bin/env node
+
 import brainCalc from '../src/games/calc-game.js';
+import greeting from '../src/cli.js';
 
 const gameCalc = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
+  const name = greeting();
   brainCalc(name);
 };
 
