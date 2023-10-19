@@ -1,11 +1,11 @@
 import readlineSync from 'readline-sync';
-import brainEven from '../src/games/even-game.js';
+import brainCalc from '../src/games/calc-game.js';
 
-const gameEven = () => {
+const gameCalc = () => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
-  brainEven(name);
+  brainCalc(name);
 };
 
-gameEven();
+gameCalc();
