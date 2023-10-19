@@ -1,5 +1,9 @@
 import { generalLogic, getRandomInt } from '../index.js';
 
+const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
+const minValue = 1;
+const maxValue = 50;
+
 const isEven = (n) => {
   if (n % 2 === 0) {
     return 'yes';
@@ -8,10 +12,10 @@ const isEven = (n) => {
 };
 
 const brainEven = (userName) => {
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  console.log(rules);
   let i = 0;
   while (i < 3) {
-    const randomInt = getRandomInt(1, 50);
+    const randomInt = getRandomInt(minValue, maxValue);
     const correctAns = isEven(randomInt);
     const [question, correctAnswer] = [randomInt, correctAns];
     const preresult = generalLogic(userName, [question, correctAnswer]);

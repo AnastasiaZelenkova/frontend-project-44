@@ -1,5 +1,9 @@
 import { generalLogic, getRandomInt } from '../index.js';
 
+const rules = 'What is the result of the expression?';
+const minValue = 1;
+const maxValue = 50;
+
 const getRandomExpression = (min, max) => {
   const actions = '+-*';
   const firstNum = getRandomInt(min, max);
@@ -10,10 +14,10 @@ const getRandomExpression = (min, max) => {
 };
 
 const brainCalc = (userName) => {
-  console.log('What is the result of the expression?');
+  console.log(rules);
   let i = 0;
   while (i < 3) {
-    const randomExp = getRandomExpression(1, 50);
+    const randomExp = getRandomExpression(minValue, maxValue);
     const correctAns = eval(randomExp);
     const [question, correctAnswer] = [randomExp, correctAns];
     const preresult = generalLogic(userName, [question, correctAnswer]);
