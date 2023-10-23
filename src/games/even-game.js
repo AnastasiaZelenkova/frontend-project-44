@@ -17,13 +17,12 @@ const brainEven = (userName) => {
   while (i < 3) {
     const randomInt = getRandomInt(minValue, maxValue);
     const correctAns = isEven(randomInt);
-    const [question, correctAnswer] = [randomInt, correctAns];
-    const preresult = generalLogic(userName, [question, correctAnswer]);
+    const preresult = generalLogic(userName, [randomInt, correctAns]);
+    console.log(preresult);
     if (preresult === 'Correct!') {
-      console.log(preresult);
       i += 1;
     } else {
-      return console.log(preresult);
+      return;
     }
   }
   const result = console.log(`Congratulations, ${userName}!`);

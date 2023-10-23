@@ -19,13 +19,12 @@ const brainCalc = (userName) => {
   while (i < 3) {
     const randomExp = getRandomExpression(minValue, maxValue);
     const correctAns = eval(randomExp);
-    const [question, correctAnswer] = [randomExp, correctAns];
-    const preresult = generalLogic(userName, [question, correctAnswer]);
+    const preresult = generalLogic(userName, [randomExp, correctAns]);
+    console.log(preresult);
     if (preresult === 'Correct!') {
-      console.log(preresult);
       i += 1;
     } else {
-      return console.log(preresult);
+      return;
     }
   }
   const result = console.log(`Congratulations, ${userName}!`);
