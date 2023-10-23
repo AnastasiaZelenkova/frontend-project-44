@@ -5,14 +5,20 @@ export const getRandomInt = (min, max) => {
   return result;
 };
 
-export const generalLogic = (userName, [questiom, correctAnswer]) => {
-  let result;
-  console.log(`Question: ${questiom}`);
-  const userAnswer = readlineSync.question('Your answer: ');
-  if (userAnswer == correctAnswer) {
-    result = 'Correct!';
-  } else {
-    result = `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`;
+export const generalLogic = (userName, gameRules, funqForQuestiom, funqForCorrectAnswer, minValue, maxValue) => {
+  console.log(gameRules);
+  let i = 0;
+  while (i < 3) {
+    const question = funqForQuestiom(minValue, maxValue);
+    const correctAnswer = funqForCorrectAnswer(question);
+    console.log(`Question: ${question}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+    if (userAnswer == correctAnswer) {
+      console.log('Correct!');
+      i += 1;
+    } else {
+      return console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
+    }
   }
-  return result;
+  return console.log(`Congratulations, ${userName}!`);
 };

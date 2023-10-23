@@ -12,21 +12,7 @@ const isEven = (n) => {
 };
 
 const brainEven = (userName) => {
-  console.log(rules);
-  let i = 0;
-  while (i < 3) {
-    const randomInt = getRandomInt(minValue, maxValue);
-    const correctAns = isEven(randomInt);
-    const preresult = generalLogic(userName, [randomInt, correctAns]);
-    console.log(preresult);
-    if (preresult === 'Correct!') {
-      i += 1;
-    } else {
-      return;
-    }
-  }
-  const result = console.log(`Congratulations, ${userName}!`);
-  return result;
+  generalLogic(userName, rules, getRandomInt, isEven, minValue, maxValue);
 };
 
 export default brainEven;

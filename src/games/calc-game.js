@@ -14,21 +14,7 @@ const getRandomExpression = (min, max) => {
 };
 
 const brainCalc = (userName) => {
-  console.log(rules);
-  let i = 0;
-  while (i < 3) {
-    const randomExp = getRandomExpression(minValue, maxValue);
-    const correctAns = eval(randomExp);
-    const preresult = generalLogic(userName, [randomExp, correctAns]);
-    console.log(preresult);
-    if (preresult === 'Correct!') {
-      i += 1;
-    } else {
-      return;
-    }
-  }
-  const result = console.log(`Congratulations, ${userName}!`);
-  return result;
+  generalLogic(userName, rules, getRandomExpression, eval, minValue, maxValue);
 };
 
 export default brainCalc;
