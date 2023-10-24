@@ -5,12 +5,12 @@ export const getRandomInt = (min, max) => {
   return result;
 };
 
-export const generalLogic = (userName, gameRules, funqForQuestiom, funqForCorrectAnswer, minValue, maxValue) => {
+export const generalLogic = (userName, gameRules, funqQuestion, funqAnswer, minValue, maxValue) => {
   console.log(gameRules);
   let i = 0;
   while (i < 3) {
-    const question = funqForQuestiom(minValue, maxValue);
-    const correctAnswer = funqForCorrectAnswer(question);
+    const question = funqQuestion(minValue, maxValue);
+    const correctAnswer = funqAnswer(question);
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer == correctAnswer) {

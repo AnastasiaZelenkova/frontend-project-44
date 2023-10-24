@@ -13,8 +13,8 @@ const gcd = (expression) => {
 };
 
 const getRandomGcd = (min, max) => {
-    const result = `${getRandomInt(min, max)} ${getRandomInt(min, max)}`;
-    return result;
+  const result = `${getRandomInt(min, max)} ${getRandomInt(min, max)}`;
+  return result;
 };
 
 const brainGcd = (userName) => {
