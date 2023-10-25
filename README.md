@@ -3,10 +3,13 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/76724af3da35062c8301/maintainability)](https://codeclimate.com/github/AnastasiaZelenkova/frontend-project-44/maintainability)
 
 ###  Пример установки пакета, запуска игры, победы и поражения игрока:
-https://asciinema.org/a/BwwhuEKjBlZmjkPy5mdz8BIY1
+https://asciinema.org/a/MUMb8B5W6M7Mqi03NTNk1EM7v
 
-https://asciinema.org/a/sEQPlltecX95vTJkCxXqGt6Rf
+https://asciinema.org/a/TAoViLLr7fzdPHDCbbnT01e3F
 
-https://asciinema.org/a/OI3iY4y7KAyWBfFiMobsrKrXZ
+https://asciinema.org/a/gezgdEd4uH6SEM52Fj8mzHqnG
 
-https://asciinema.org/a/pI6cLqcT1cBsDWNv6mOnGXE9n
+https://asciinema.org/a/eS71lrX9ROrN0QbgCggwIBPLa
+
+https://asciinema.org/a/slUx6o7TnyYnBOHF5IZ8KG9bK
+
