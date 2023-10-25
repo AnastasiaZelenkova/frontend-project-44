@@ -14,7 +14,7 @@ const isPrime = (numChek) => {
 };
 
 const brainPrime = (userName) => {
-    generalLogic(userName, rules, getRandomInt, isPrime , minValue, maxValue);
+  generalLogic(userName, rules, getRandomInt, isPrime, minValue, maxValue);
 };
 
 export default brainPrime;
