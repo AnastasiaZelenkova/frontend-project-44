@@ -13,7 +13,7 @@ export const generalLogic = (userName, gameRules, funqQuestion, funqAnswer, minV
     const correctAnswer = funqAnswer(question);
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (userAnswer == correctAnswer) {
+    if (userAnswer.toString() === correctAnswer.toString()) {
       console.log('Correct!');
       i += 1;
     } else {

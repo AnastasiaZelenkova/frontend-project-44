@@ -6,7 +6,7 @@ const maxValue = 50;
 
 const gcd = (expression) => {
   const [a, b] = expression.split(' ');
-  if (a == 0) {
+  if (Number(a) === 0) {
     return b;
   }
   return gcd(`${b % a} ${a}`);
