@@ -13,8 +13,21 @@ const getRandomExpression = (min, max) => {
   return result;
 };
 
+const getResultCalc = (expr) => {
+  const [firstElem, sign, secondElem] = expr.split(' ');
+  let result;
+  if (sign === '+') {
+    result = Number(firstElem) + Number(secondElem);
+  } else if (sign === '-') {
+    result = Number(firstElem) - Number(secondElem);
+  } else if (sign === '*') {
+    result = Number(firstElem) * Number(secondElem);
+  }
+  return result;
+};
+
 const brainCalc = (userName) => {
-  generalLogic(userName, rules, getRandomExpression, eval, minValue, maxValue);
+  generalLogic(userName, rules, getRandomExpression, getResultCalc, minValue, maxValue);
 };
 
 export default brainCalc;
