@@ -30,22 +30,25 @@ There ara 5 avaliable games:
 
 ### Example `brain-games`
 
-
+[![asciicast](https://asciinema.org/a/GKugvRJ9xrvQ7pjwQiCgCZgfH.svg)](https://asciinema.org/a/GKugvRJ9xrvQ7pjwQiCgCZgfH)
 
 ###  Example `brain-even`
 
-
+[![asciicast](https://asciinema.org/a/MUMb8B5W6M7Mqi03NTNk1EM7v.svg)](https://asciinema.org/a/MUMb8B5W6M7Mqi03NTNk1EM7v)
 
 ###  Example `brain-calc`
 
-
+[![asciicast](https://asciinema.org/a/TAoViLLr7fzdPHDCbbnT01e3F.svg)](https://asciinema.org/a/TAoViLLr7fzdPHDCbbnT01e3F)
 
 ###  Example `brain-prime`
 
-
+[![asciicast](https://asciinema.org/a/slUx6o7TnyYnBOHF5IZ8KG9bK.svg)](https://asciinema.org/a/slUx6o7TnyYnBOHF5IZ8KG9bK)
 
 ###  Example `brain-gcd`
 
-
+[![asciicast](https://asciinema.org/a/gezgdEd4uH6SEM52Fj8mzHqnG.svg)](https://asciinema.org/a/gezgdEd4uH6SEM52Fj8mzHqnG)
 
 ###  Example `brain-progression`
+
+[![asciicast](https://asciinema.org/a/eS71lrX9ROrN0QbgCggwIBPLa.svg)](https://asciinema.org/a/eS71lrX9ROrN0QbgCggwIBPLa)
+
