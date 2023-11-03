@@ -17,7 +17,7 @@ const getEvenQuestAnsw = () => {
   return [question, correctAnswer];
 };
 
-const playBrainEven = (userName) => {
+const playBrainEven = () => {
   getGeneralLogic(rules, getEvenQuestAnsw);
 };
 

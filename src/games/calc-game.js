@@ -6,7 +6,8 @@ const maxValue = 50;
 
 const getCalcQuestAns = () => {
   const actions = '+-*';
-  const [firstNum, secondNum] = [getRandomInt(minValue, maxValue), getRandomInt(minValue, maxValue)];
+  const firstNum = getRandomInt(minValue, maxValue);
+  const secondNum = getRandomInt(minValue, maxValue);
   const action = actions[getRandomInt(0, actions.length - 1)];
   const question = `${firstNum} ${action} ${secondNum}`;
   let correctAnswer;

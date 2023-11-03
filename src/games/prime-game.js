@@ -13,10 +13,10 @@ const getPrimeQuestAnsw = () => {
     }
   }
 
-  return [question, correctAnswer]
+  return [question, correctAnswer];
 };
 
-const playBrainPrime = (userName) => {
+const playBrainPrime = () => {
   getGeneralLogic(rules, getPrimeQuestAnsw);
 };
 

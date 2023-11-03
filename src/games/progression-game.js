@@ -1,4 +1,4 @@
-import { getGeneralLogic, getRandomInt,} from '../index.js';
+import { getGeneralLogic, getRandomInt } from '../index.js';
 
 const rules = 'What number is missing in the progression?';
 const minValue = 1;
@@ -21,7 +21,6 @@ const getProgressionQuestAns = () => {
   const question = result.join(' ');
   return [question, correctAnswer];
 };
-
 
 const playGameProg = () => {
   getGeneralLogic(rules, getProgressionQuestAns);

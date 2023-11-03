@@ -18,7 +18,7 @@ const getGcdQuestAnsw = () => {
   return [question, correctAnswer];
 };
 
-const playBrainGcd = (userName) => {
+const playBrainGcd = () => {
   getGeneralLogic(rules, getGcdQuestAnsw);
 };
 
