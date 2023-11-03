@@ -1,4 +1,4 @@
-import { generalLogic, getRandomInt } from '../index.js';
+import { getGeneralLogic, getRandomInt } from '../index.js';
 
 const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 const minValue = 1;
@@ -11,8 +11,14 @@ const isEven = (n) => {
   return 'no';
 };
 
-const brainEven = (userName) => {
-  generalLogic(userName, rules, getRandomInt, isEven, minValue, maxValue);
+const getEvenQuestAnsw = () => {
+  const question = getRandomInt(minValue, maxValue);
+  const correctAnswer = isEven(question);
+  return [question, correctAnswer];
 };
 
-export default brainEven;
+const playBrainEven = (userName) => {
+  getGeneralLogic(rules, getEvenQuestAnsw);
+};
+
+export default playBrainEven;

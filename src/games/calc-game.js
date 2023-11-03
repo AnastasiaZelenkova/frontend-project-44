@@ -1,33 +1,27 @@
-import { generalLogic, getRandomInt } from '../index.js';
+import { getGeneralLogic, getRandomInt } from '../index.js';
 
 const rules = 'What is the result of the expression?';
 const minValue = 1;
 const maxValue = 50;
 
-const getRandomExpression = (min, max) => {
+const getCalcQuestAns = () => {
   const actions = '+-*';
-  const firstNum = getRandomInt(min, max);
-  const secondNum = getRandomInt(min, max);
+  const [firstNum, secondNum] = [getRandomInt(minValue, maxValue), getRandomInt(minValue, maxValue)];
   const action = actions[getRandomInt(0, actions.length - 1)];
-  const result = `${firstNum} ${action} ${secondNum}`;
-  return result;
-};
-
-const getResultCalc = (expr) => {
-  const [firstElem, sign, secondElem] = expr.split(' ');
-  let result;
-  if (sign === '+') {
-    result = Number(firstElem) + Number(secondElem);
-  } else if (sign === '-') {
-    result = Number(firstElem) - Number(secondElem);
-  } else if (sign === '*') {
-    result = Number(firstElem) * Number(secondElem);
+  const question = `${firstNum} ${action} ${secondNum}`;
+  let correctAnswer;
+  if (action === '+') {
+    correctAnswer = firstNum + secondNum;
+  } else if (action === '-') {
+    correctAnswer = firstNum - secondNum;
+  } else if (action === '*') {
+    correctAnswer = firstNum * secondNum;
   }
-  return result;
+  return [question, correctAnswer];
 };
 
-const brainCalc = (userName) => {
-  generalLogic(userName, rules, getRandomExpression, getResultCalc, minValue, maxValue);
+const playBrainCalc = () => {
+  getGeneralLogic(rules, getCalcQuestAns);
 };
 
-export default brainCalc;
+export default playBrainCalc;
