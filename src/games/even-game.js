@@ -6,14 +6,14 @@ const maxValue = 50;
 
 const isEven = (n) => {
   if (n % 2 === 0) {
-    return 'yes';
+    return true;
   }
-  return 'no';
+  return false;
 };
 
 const getEvenQuestAnsw = () => {
   const question = getRandomInt(minValue, maxValue);
-  const correctAnswer = isEven(question);
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 

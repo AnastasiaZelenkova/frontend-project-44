@@ -4,20 +4,31 @@ const rules = 'What is the result of the expression?';
 const minValue = 1;
 const maxValue = 50;
 
+const calculate = (num1, num2, sign) => {
+  let result;
+  switch (sign) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 * num2;
+      break;
+    default:
+      break;
+  }
+  return result;
+};
+
 const getCalcQuestAns = () => {
   const actions = '+-*';
   const firstNum = getRandomInt(minValue, maxValue);
   const secondNum = getRandomInt(minValue, maxValue);
   const action = actions[getRandomInt(0, actions.length - 1)];
   const question = `${firstNum} ${action} ${secondNum}`;
-  let correctAnswer;
-  if (action === '+') {
-    correctAnswer = firstNum + secondNum;
-  } else if (action === '-') {
-    correctAnswer = firstNum - secondNum;
-  } else if (action === '*') {
-    correctAnswer = firstNum * secondNum;
-  }
+  const correctAnswer = calculate(firstNum, secondNum, action);
   return [question, correctAnswer];
 };
 
