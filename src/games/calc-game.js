@@ -5,21 +5,16 @@ const minValue = 1;
 const maxValue = 50;
 
 const calculate = (num1, num2, sign) => {
-  let result;
   switch (sign) {
     case '+':
-      result = num1 + num2;
-      break;
+      return num1 + num2;
     case '-':
-      result = num1 - num2;
-      break;
+      return num1 - num2;
     case '*':
-      result = num1 * num2;
-      break;
+      return num1 * num2;
     default:
-      break;
+      throw new Error(`Unknown sign state: '${sign}'!`);
   }
-  return result;
 };
 
 const getCalcQuestAns = () => {
